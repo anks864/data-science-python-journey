@@ -1,67 +1,69 @@
 """
 File: no02_basic_data_types.py
 Topic: Python Data Types
-Description: numeric types, type conversion, boolean, and string operations.
+Description: Covers numeric types, type conversion, boolean logic, and string operations.
 """
 
 # ==============================
 # 1. Integer
 # ==============================
-a = 8
-print(a, "-", type(a))
+integer_num = 8
+print(integer_num, "-", type(integer_num))
 
 
 # ==============================
 # 2. Floating Point
 # ==============================
-b = 2.3
-print(b, "-", type(b))
+float_num = 2.3
+print(float_num, "-", type(float_num))
 
 
 # ==============================
 # 3. Complex Numbers
 # ==============================
-c = 1 + 3j  # 'j' represents imaginary part
-print(c, "-", type(c))
+complex_num = 1 + 3j  # 'j' represents imaginary part
+print(complex_num, "-", type(complex_num))
 
 
 # ==============================
 # 4. Type Conversion
 # ==============================
-print(a, "-> float:", float(a), "-", type(float(a)))
-print(b, "-> int:", int(b), "-", type(int(b)))
-print(a, "-> complex:", complex(a), "-", type(complex(a)))
+print(integer_num, "-> float:", float(integer_num), "-", type(float(integer_num)))
+print(float_num, "-> int:", int(float_num), "-", type(int(float_num)))
+print(integer_num, "-> complex:", complex(integer_num), "-", type(complex(integer_num)))
 # Note: complex to int/float is not directly possible
 
 
 # ==============================
 # 5. Boolean
 # ==============================
-x, y = True, False
-print(x, type(x), y, type(y))
+is_valid = True
+is_complete = False
+print(is_valid, type(is_valid), is_complete, type(is_complete))
 
-comparison = 7 < 3
-print("Is 7 < 3?", comparison, type(comparison))
+comparison_result = 7 < 3
+print("Is 7 < 3?", comparison_result, type(comparison_result))
 
 
 # ==============================
 # 6. Strings and Operations
 # ==============================
-print("Machine Learning:", "Learning it!")   # comma adds space
-print("Machine Learning:" + "Learning it!") # '+' joins without space
+course_text = "Machine Learning"
+print(course_text + " is interesting!")   # concatenation
+print(course_text, "Learning it!")        # comma adds space
 
-text = "Courses"
-print(text, type(text))
-print(text * 5)  # repetition
+word = "Courses"
+print(word, type(word))
+print(word * 5)  # repetition
 
 
 # ==============================
 # 7. String Slicing
 # ==============================
-strg = "for Machine Learning"
-print(strg[1:15])     # substring
-print(strg[0:15:2])   # step slicing
-print(text + strg)    # concatenation
+sentence = "for Machine Learning"
+print(sentence[1:15])     # substring
+print(sentence[0:15:2])   # step slicing
+print(word + sentence)    # concatenation
 
 
 # ==============================
@@ -69,17 +71,17 @@ print(text + strg)    # concatenation
 # ==============================
 # Immutable types: int, float, string, bool, tuple
 
-a = 5
-print("a = 5 ->", id(a))
+value = 5
+print("value = 5 ->", id(value))
 
-a = 7
-print("a = 7 ->", id(a))
+value = 7
+print("value = 7 ->", id(value))
 
-b = 5
-print("b = 5 ->", id(b))
+another_value = 5
+print("another_value = 5 ->", id(another_value))
 
-b = 7
-print("b = 7 ->", id(b))
+another_value = 7
+print("another_value = 7 ->", id(another_value))
 
 # Mutable types: list, set, dictionary
 
@@ -87,9 +89,8 @@ print("b = 7 ->", id(b))
 # ==============================
 # 9. Mini Practice
 # ==============================
-num = float(input("Enter a number: "))
-print("Integer:", int(num))
-print("Float:", float(num))
-print("Complex:", complex(num))
+user_number = float(input("Enter a number: "))
 
-# ==============================
+print("As Integer:", int(user_number))
+print("As Float:", float(user_number))
+print("As Complex:", complex(user_number))
