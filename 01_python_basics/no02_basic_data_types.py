@@ -94,3 +94,7 @@ user_number = float(input("Enter a number: "))
 print("As Integer:", int(user_number))
 print("As Float:", float(user_number))
 print("As Complex:", complex(user_number))
+
+# ==============================
+# EOF: Feel free to open an issue to report a bug or discrepancy
+# ==============================
