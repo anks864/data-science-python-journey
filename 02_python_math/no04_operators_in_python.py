@@ -93,6 +93,7 @@ elif num % 2 != 0 and num >= 0:
 else:
     print("Negative Number")
 
+
 # ==============================
 # EOF: Feel free to open an issue to report a bug or discrepancy
 # ==============================
