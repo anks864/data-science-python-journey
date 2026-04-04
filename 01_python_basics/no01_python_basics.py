@@ -56,13 +56,5 @@ print("Addition:", int(num1) + int(num2))     # typecasting to int
 
 
 # ==============================
-# 6. Mini Logic (Odd/Even)
-# ==============================
-num = int(input("Enter a number to check even/odd: "))
-
-if num % 2 == 0:
-    print("Even number")
-else:
-    print("Odd number")
-
+# EOF: Feel free to open an issue to report a bug or discrepancy
 # ==============================
