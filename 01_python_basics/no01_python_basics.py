@@ -56,5 +56,5 @@ print("Addition:", int(num1) + int(num2))     # typecasting to int
 
 
 # ==============================
-# EOF: Feel free to open an issue to report a bug or discrepancy
+# EOF: Feel free to open an issue for bugs or suggestions
 # ==============================
