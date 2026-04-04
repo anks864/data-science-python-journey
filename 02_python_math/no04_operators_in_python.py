@@ -86,11 +86,13 @@ print("Element not in list:", element not in number_list)
 # ==============================
 num = int(input("Enter a number: "))
 
-if num % 2 == 0 and num > 0:
+if num % 2 == 0 and num >= 0:
     print("Positive Even Number")
-elif num % 2 != 0:
+elif num % 2 != 0 and num >= 0:
     print("Odd Number")
 else:
-    print("Zero or Negative Even Number")
+    print("Negative Number")
 
+# ==============================
+# EOF: Feel free to open an issue to report a bug or discrepancy
 # ==============================
