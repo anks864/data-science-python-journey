@@ -92,5 +92,5 @@ print(f"{user_number}! = {fact_value}")
 
 
 # ==============================
-# EOF: Feel free to open an issue to report a bug or discrepancy
+# EOF: Feel free to open an issue for bugs or suggestions
 # ==============================
