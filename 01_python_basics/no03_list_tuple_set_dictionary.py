@@ -109,6 +109,7 @@ sample_numbers = [1, 2, 2, 3, 4, 4, 5]
 unique_count = len(set(sample_numbers))
 print("Number of unique elements:", unique_count)
 
+
 # ==============================
-# EOF: Feel free to open an issue to report a bug or discrepancy
+# EOF: Feel free to open an issue for bugs or suggestions
 # ==============================
