@@ -1,75 +1,123 @@
-#NUMPY - maths numerical python
-import numpy as np#shortens the abbreviation
+"""
+File: no06_numerical_python.py
+Topic: NumPy (Numerical Python)
+Description: Demonstrates NumPy operations, array creation, performance comparison, and manipulation.
+"""
 
-from time import process_time #proves numpy is faster
-#time taken by list
-python_list = [ i for i in range(10000000)]
-start_time1 = process_time(); print("Start time:",start_time1)
-python_list = [i+5 for i in python_list]
-end_time1 = process_time(); print("End time:",end_time1)
-print("Time taken by list",end_time1 - start_time1)
-#time taken by numpy array
-np_array = np.array([i for i in range(10000000)])
-start_time2 = process_time();print("Start time:",start_time2)
+import numpy as np
+from time import process_time
+
+# ==============================
+# 1. Performance Comparison (List vs NumPy)
+# ==============================
+python_list = [i for i in range(1000000)]
+
+start_time_list = process_time()
+python_list = [i + 5 for i in python_list]
+end_time_list = process_time()
+
+print("Time taken by Python list:", end_time_list - start_time_list)
+
+np_array = np.array([i for i in range(1000000)])
+
+start_time_np = process_time()
 np_array += 5
-end_time2 = process_time(); print("End time:",end_time2)
-print("Time taken by array",end_time2 - start_time2)#numpy>fast>>list
+end_time_np = process_time()
 
-np_arr = np.array([1,2,3,4,5])
-print(np_arr,type(np_arr),"size:",np_arr.shape)
-np_mat = np.array([(1,2,3,4,5),(5,4,3,2,1)],dtype = float)
-print(np_mat,type(np_mat),"size:",np_mat.shape) 
-#Initial placeholders
-x = np.zeros((3,5))#zeros
-print(x)
-y = np.ones((4,7),dtype = int)#ones
-print(y)
-z = np.full((2,6),8.23)#any other number
-print(z)
-a = np.eye(4)#identity matrix
-print(a)
-b = np.random.random((4,5))#random values between 0 and 1
-print(b)
-c = np.random.randint(30,70,(3,6))#random values between 30 and 70
-print(c)
-d = np.linspace(10,30,6,dtype = int)#evenly spaced 6 values, 30 included
-print(d)
-e = np.arange(10,30,5.5)#difference between the evenly spaced numbers, ie, step
-print(e)
-#list into array
-list2 = [10,20,30,40,50,60]
-nparr = np.asarray(list2)
-print(nparr, type(nparr))
-#Analysing a numpy array
-r = np.random.randint(10,90,(4,7))
-print("array:")
-print(r)
-print("shape:",r.shape)
-print("dimensions:",r.ndim)
-print("no of elements:",r.size)
-print("data type:",r.dtype)
+print("Time taken by NumPy array:", end_time_np - start_time_np)
 
-#Mathematical Operations
-lst1 = [9,8,7,6,5]
-lst2 = [1,2,3,4,5]
-print(lst1 + lst2) #2 lists are joined
 
-n_arr1 = np.random.randint(11,20,(3,3))
-print("ARRAY 1:\n",n_arr1)
-n_arr2 = np.random.randint(1,10,(3,3))
-print("ARRAY 2:\n",n_arr2)
-print("SUM:\n",np.add(n_arr1,n_arr2)) #print(n_arr1 + n_arr2)
-print("DiIFFERENCE:\n",np.subtract(n_arr1,n_arr2)) #print(n_arr1 - n_arr2)
-print("PRODUCT:\n",np.multiply(n_arr1,n_arr2)) #print(n_arr1 * n_arr2)
-print("QUOTIENT:\n",np.divide(n_arr1,n_arr2)) #print(n_arr1 / n_arr2)
-print("REMAINDER:\n",np.remainder(n_arr1,n_arr2)) #print(n_arr1 % n_arr2)
+# ==============================
+# 2. Creating NumPy Arrays
+# ==============================
+one_d_array = np.array([1, 2, 3, 4, 5])
+print(one_d_array, type(one_d_array), "Shape:", one_d_array.shape)
 
-#Array Manipulation
-#transposing
-arr1 = np.random.randint(11,20,(2,3))
-print("Array:\n",arr1, arr1.shape)
-trans =arr1.T #np.transpose(arr1) 
-print("Transpose:\n",trans, trans.shape)
-#reshaping
-arr1 = arr1.reshape(3,2)
-print("Array Reshaped:\n",arr1,arr1.shape)
+two_d_array = np.array([(1, 2, 3), (4, 5, 6)], dtype=float)
+print(two_d_array, type(two_d_array), "Shape:", two_d_array.shape)
+
+
+# ==============================
+# 3. Initializing Arrays
+# ==============================
+zeros_array = np.zeros((3, 5))
+print("Zeros:\n", zeros_array)
+
+ones_array = np.ones((4, 7), dtype=int)
+print("Ones:\n", ones_array)
+
+full_array = np.full((2, 6), 8.23)
+print("Full:\n", full_array)
+
+identity_matrix = np.eye(4)
+print("Identity Matrix:\n", identity_matrix)
+
+random_array = np.random.random((4, 5))
+print("Random (0-1):\n", random_array)
+
+random_int_array = np.random.randint(30, 70, (3, 6))
+print("Random Integers:\n", random_int_array)
+
+linspace_array = np.linspace(10, 30, 6, dtype=int)
+print("Linspace:\n", linspace_array)
+
+arange_array = np.arange(10, 30, 5.5)
+print("Arange:\n", arange_array)
+
+
+# ==============================
+# 4. List to NumPy Array
+# ==============================
+sample_list = [10, 20, 30, 40, 50, 60]
+numpy_array = np.asarray(sample_list)
+print(numpy_array, type(numpy_array))
+
+
+# ==============================
+# 5. Analyzing NumPy Array
+# ==============================
+random_matrix = np.random.randint(10, 90, (4, 7))
+
+print("Array:\n", random_matrix)
+print("Shape:", random_matrix.shape)
+print("Dimensions:", random_matrix.ndim)
+print("Number of elements:", random_matrix.size)
+print("Data type:", random_matrix.dtype)
+
+
+# ==============================
+# 6. Mathematical Operations
+# ==============================
+list1 = [9, 8, 7, 6, 5]
+list2 = [1, 2, 3, 4, 5]
+print("List concatenation:", list1 + list2)
+
+array1 = np.random.randint(11, 20, (3, 3))
+array2 = np.random.randint(1, 10, (3, 3))
+
+print("Array 1:\n", array1)
+print("Array 2:\n", array2)
+
+print("Sum:\n", np.add(array1, array2))
+print("Difference:\n", np.subtract(array1, array2))
+print("Product:\n", np.multiply(array1, array2))
+print("Quotient:\n", np.divide(array1, array2))
+print("Remainder:\n", np.remainder(array1, array2))
+
+
+# ==============================
+# 7. Array Manipulation
+# ==============================
+matrix = np.random.randint(11, 20, (2, 3))
+print("Original Matrix:\n", matrix, matrix.shape)
+
+transpose_matrix = matrix.T
+print("Transpose:\n", transpose_matrix, transpose_matrix.shape)
+
+reshaped_matrix = matrix.reshape(3, 2)
+print("Reshaped Matrix:\n", reshaped_matrix, reshaped_matrix.shape)
+
+
+# ==============================
+# EOF: Feel free to open an issue to report a bug or discrepancy
+# ==============================
