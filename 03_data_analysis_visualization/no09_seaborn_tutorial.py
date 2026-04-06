@@ -1,69 +1,161 @@
-#Seaborn - Data Visualization Library
-#Seaborn has some built in data sets 
-#Importing libraries
+# ==============================
+# File: no09_seaborn_tutorial.py
+# Topic: Seaborn - Data Visualization
+# Description: Covers Seaborn datasets and various plots
+# ==============================
+
+
+# ==============================
+# Importing Libraries
+# ==============================
 import seaborn as sns
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-#total bill vs tips dataset
+
+# ==============================
+# Dataset 1: Tips Dataset
+# ==============================
 tips = sns.load_dataset('tips')
-print("shape of Tips dataset:",tips.shape)
+
+print("Shape of Tips dataset:", tips.shape)
 print(tips.head())
-#visualize the data
-sns.set_theme() #set theme
-sns.relplot(data = tips,#data to be read
-            x = 'total_bill', #x-axis
-            y = 'tip', #y-axis
-            col = 'time', #different columns for data
-            hue = 'smoker', #color of plot
-            style = 'smoker', #shape of plot points
-            size = 'size') #size of the plot points
-plt.show()#to show the plot
 
-#iris flower dataset
-iris = sns.load_dataset('iris')
-print("shape of Iris dataset:",iris.shape)
-print(iris.head())
-#Scatter Plot
-sns.scatterplot(x = 'sepal_length', y = 'petal_length', hue = 'species',style = 'species', data = iris)
-plt.show() #hue sets color changes
+# Visualization: Relational Plot
+sns.set_theme()
 
-#Titanic ship dataset
-titanic = sns.load_dataset('titanic')
-print("shape of Titanic dataset:",titanic.shape)
-print(titanic.head())
-#Count Plot
-sns.countplot(x = 'survived', hue = 'sex', data = titanic)#no style as countplot
-plt.show()#no y axis, as the values of one column are its x axis data
-#Bar Plot
-sns.barplot(x = 'class', y = 'survived', hue = 'sex', data = titanic)
+sns.relplot(
+    data=tips,
+    x='total_bill',
+    y='tip',
+    col='time',
+    hue='smoker',
+    style='smoker',
+    size='size'
+)
+
 plt.show()
 
-#house price dataset
+
+# ==============================
+# Dataset 2: Iris Dataset
+# ==============================
+iris = sns.load_dataset('iris')
+
+print("Shape of Iris dataset:", iris.shape)
+print(iris.head())
+
+# Visualization: Scatter Plot
+sns.scatterplot(
+    x='sepal_length',
+    y='petal_length',
+    hue='species',
+    style='species',
+    data=iris
+)
+
+plt.show()
+
+
+# ==============================
+# Dataset 3: Titanic Dataset
+# ==============================
+titanic = sns.load_dataset('titanic')
+
+print("Shape of Titanic dataset:", titanic.shape)
+print(titanic.head())
+
+# Visualization: Count Plot
+sns.countplot(
+    x='survived',
+    hue='sex',
+    data=titanic
+)
+
+plt.show()
+
+# Visualization: Bar Plot
+sns.barplot(
+    x='class',
+    y='survived',
+    hue='sex',
+    data=titanic
+)
+
+plt.show()
+
+
+# ==============================
+# Dataset 4: Boston Housing Dataset
+# ==============================
 data_url = "http://lib.stat.cmu.edu/datasets/boston"
-raw_df = pd.read_csv(data_url, sep=r"\s+", skiprows=22, header=None)
-#Combine the odd rows with all columns and even rows with only the first two columns
-data = np.hstack([raw_df.values[::2, :], raw_df.values[1::2, :2]])
-# The target variable (last column of the dataset)
+
+raw_df = pd.read_csv(
+    data_url,
+    sep=r"\s+",
+    skiprows=22,
+    header=None
+)
+
+# Combine rows to form dataset
+data = np.hstack([
+    raw_df.values[::2, :],
+    raw_df.values[1::2, :2]
+])
+
+# Target variable
 boston_target = raw_df.values[1::2, 2]
-# Create a DataFrame for the features
-house = pd.DataFrame(data, columns=[
-    "CRIM", "ZN", "INDUS", "CHAS", "NOX", "RM", "AGE", "DIS", "RAD", "TAX", "PTRATIO", "B", "LSTAT"])
+
+# Create DataFrame
+house = pd.DataFrame(
+    data,
+    columns=[
+        "CRIM", "ZN", "INDUS", "CHAS", "NOX", "RM",
+        "AGE", "DIS", "RAD", "TAX", "PTRATIO", "B", "LSTAT"
+    ]
+)
+
 house['PRICE'] = boston_target
-print("shape of Boston dataset:",house.shape)
+
+print("Shape of Boston dataset:", house.shape)
 print(house.head())
 
-#Distribution Plot
+
+# ==============================
+# Visualization: Distribution Plot
+# ==============================
 sns.displot(house['PRICE'])
 plt.show()
 
-#Correlation - Positive & Negative
+
+# ==============================
+# Correlation Analysis
+# ==============================
 correlation = house.corr()
-print("Correlation: ")
+
+print("Correlation Matrix:")
 print(correlation)
-#Heat Map
-plt.figure(figsize = (10,100))
-sns.heatmap(correlation, cbar= True, square=True, fmt = '.1f', annot = True,
-            annot_kws = {'size':8}, cmap='Blues')
+
+
+# ==============================
+# Visualization: Heatmap
+# ==============================
+plt.figure(figsize=(10, 10))
+
+sns.heatmap(
+    correlation,
+    cbar=True,
+    square=True,
+    fmt='.1f',
+    annot=True,
+    annot_kws={'size': 8},
+    cmap='Blues'
+)
+
 plt.show()
+
+
+# ==============================
+# EOF: Feel free to open an issue to report a bug or discrepancy
+# ==============================
