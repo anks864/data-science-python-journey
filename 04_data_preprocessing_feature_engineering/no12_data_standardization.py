@@ -74,7 +74,7 @@ scaler.fit(X_train)
 X_train_std = scaler.transform(X_train)
 X_test_std = scaler.transform(X_test)
 
-print("Standard Deviation (after):", X_train_std.std())
+print("Standard Deviation (after standardization):", X_train_std.std())
 
 
 # ==============================
