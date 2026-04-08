@@ -59,7 +59,8 @@ print(
 # ==============================
 # Before Standardization
 # ==============================
-print("Standard Deviation (before):", dataset.data.std())
+print("Before Standardization---")
+print("Standard Deviation:", dataset.data.std())
 
 
 # ==============================
@@ -74,7 +75,8 @@ scaler.fit(X_train)
 X_train_std = scaler.transform(X_train)
 X_test_std = scaler.transform(X_test)
 
-print("Standard Deviation (after standardization):", X_train_std.std())
+print("After Standardization---")
+print("Standard Deviation", X_train_std.std())
 
 
 # ==============================
