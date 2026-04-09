@@ -60,5 +60,21 @@ X = standardized_data
 
 
 # ==============================
+# Train-Test Split
+# ==============================
+X_train, X_test, Y_train, Y_test = train_test_split(
+    X, Y,
+    test_size=0.2,
+    random_state=2
+)
+
+print(
+    "X.shape =", X.shape,
+    "X_train.shape =", X_train.shape,
+    "X_test.shape =", X_test.shape
+)
+
+
+# ==============================
 # EOF: Feel free to open an issue to report a bug or discrepancy
 # ==============================
