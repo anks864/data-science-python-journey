@@ -1,37 +1,78 @@
-#Label Encoding - converting the labels into numeric form
+# ==============================
+# File: no13_label_encoding.py
+# Topic: Label Encoding
+# Description: Converts categorical labels into numeric form
+# ==============================
 
+
+# ==============================
+# Importing Libraries
+# ==============================
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
-'''#CANCER DATA
+
+
+# ==============================
+# Example 1: Cancer Dataset (Commented)
+# ==============================
+'''
 cancer_data = pd.read_csv("breast_cancer_data.csv")
-print("First five Rows:")
+
+print("First five rows:")
 print(cancer_data.head())
 
-#finding the count of different labels
-print("Data Diagnosis:")
+# Count of different labels
+print("Diagnosis value counts:")
 print(cancer_data['diagnosis'].value_counts())
 
-#load the label encoder function
+# Apply Label Encoding
 label_encode = LabelEncoder()
-labels = label_encode.fit_transform(cancer_data.diagnosis)
+labels = label_encode.fit_transform(cancer_data['diagnosis'])
 
-#appending the labels to the dataframe
+# Add encoded labels to DataFrame
 cancer_data['target'] = labels
-#0 - Benign; 1 - Malignant ( alphabetical order)
-print("New First Five Rows:")
+
+# Note:
+# 0 -> Benign
+# 1 -> Malignant (alphabetical order)
+
+print("Updated first five rows:")
 print(cancer_data.head())
+
 print(cancer_data['target'].value_counts())
 '''
-#IRIS DATA
+
+
+# ==============================
+# Example 2: Iris Dataset
+# ==============================
 iris_data = pd.read_csv("iris_data.csv")
-print("First five Rows:")
+
+print("First five rows:")
 print(iris_data.head())
 
-print("Data counts of Species column:")
+print("Species value counts:")
 print(iris_data['Species'].value_counts())
+
+
+# ==============================
+# Apply Label Encoding
+# ==============================
 label_encode_iris = LabelEncoder()
-iris_labels = label_encode_iris.fit_transform(iris_data.Species)
+
+iris_labels = label_encode_iris.fit_transform(
+    iris_data['Species']
+)
+
 iris_data['target'] = iris_labels
-print("New First Five Rows:")
+
+print("Updated first five rows:")
 print(iris_data.head())
+
+print("Encoded label counts:")
 print(iris_data['target'].value_counts())
+
+
+# ==============================
+# EOF: Feel free to open an issue to report a bug or discrepancy
+# ==============================
