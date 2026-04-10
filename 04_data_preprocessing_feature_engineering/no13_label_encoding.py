@@ -50,6 +50,12 @@ print(cancer_data['target'].value_counts())
 # ==============================
 iris_data = pd.read_csv("iris_data.csv")
 
+#Note
+#Species:
+#--Iris setosa--
+#--Iris versicolor--
+#--Iris virginica--
+
 print("\nFirst five rows (Iris Dataset):")
 print(iris_data.head())
 
