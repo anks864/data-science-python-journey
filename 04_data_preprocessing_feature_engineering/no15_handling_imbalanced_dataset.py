@@ -68,6 +68,12 @@ print("Last five rows of new dataset:")
 print(new_dataset.tail())
 
 
+# ==============================
+# New Class Distribution
+# ==============================
+print("New value count:\n", new_dataset['Class'].value_counts())
+
+# Balanced dataset improves model performance
 
 
 # ==============================
