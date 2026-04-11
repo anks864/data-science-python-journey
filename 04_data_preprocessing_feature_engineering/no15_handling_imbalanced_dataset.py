@@ -44,5 +44,32 @@ print("Shape of Fraud Data:", fraud.shape)
 
 
 # ==============================
+# Under-Sampling Technique
+# ==============================
+# Create a balanced dataset by sampling legit transactions
+
+legit_sample = legit.sample(n=492)
+
+print("Legit under-sample shape:", legit_sample.shape)
+
+
+# ==============================
+# Combine Balanced Data
+# ==============================
+new_dataset = pd.concat(
+  [legit_sample, fraud],
+  axis = 0 #Row-wise concatenation
+)
+
+print("First five rows of new dataset:")
+print(new_dataset.head())
+
+print("Last five rows of new dataset:")
+print(new_dataset.tail())
+
+
+
+
+# ==============================
 # EOF: Feel free to open an issue to report a bug or discrepancy
 # ==============================
