@@ -58,7 +58,7 @@ print("Legit under-sample shape:", legit_sample.shape)
 # ==============================
 new_dataset = pd.concat(
   [legit_sample, fraud],
-  axis = 0 #Row-wise concatenation
+  axis = 0 #0 implies row-wise concatenation
 )
 
 print("First five rows of new dataset:")
