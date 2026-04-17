@@ -34,6 +34,15 @@ print("After += 5:", value)
 value -= 10
 print("After -= 10:", value)
 
+value *= 20
+print("After *= 20:", value)
+
+value /= 7
+print("After /= 7:", value)
+
+value %= 7
+print("After %= 7:", value)
+
 
 # ==============================
 # 3. Comparison Operators
