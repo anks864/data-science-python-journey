@@ -14,9 +14,9 @@ import numpy as np
 # ==============================
 # Matrix Basics
 # ==============================
-# Scalar  -> Single number
-# Vector  -> List of numbers (row/column)
-# Matrix  -> Collection of rows and columns
+# Scalar  -> Single number (1 x 1)
+# Vector  -> List of numbers (row/column) (1 x n) or (n x 1)
+# Matrix  -> Collection of rows and columns (m x n)
 
 
 # ==============================
