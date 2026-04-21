@@ -18,7 +18,7 @@ print("Difference:", num1 - num2)      # subtraction
 print("Product:", num1 * num2)         # multiplication
 print("Division:", num1 / num2)        # quotient
 print("Floor Division:", num1 // num2) # floor value
-print("Modulus:", num1 % num2)         # remainder (FIXED)
+print("Modulus:", num1 % num2)         # remainder
 print("Exponent:", num1 ** num2)       # power
 
 
@@ -40,8 +40,14 @@ print("After *= 20:", value)
 value /= 7
 print("After /= 7:", value)
 
+value //= 3
+print("After //= 3:", value)
+
 value %= 7
 print("After %= 7:", value)
+
+value **= 5
+print("After **= 5:", value)
 
 
 # ==============================
@@ -56,9 +62,9 @@ print("second_num =", second_num)
 print("Equal:", first_num == second_num)
 print("Not Equal:", first_num != second_num)
 print("Greater Than:", first_num > second_num)
-print("Greater or Equal:", first_num >= second_num)
+print("Greater Than or Equal:", first_num >= second_num)
 print("Less Than:", first_num < second_num)
-print("Less or Equal:", first_num <= second_num)
+print("Less Than or Equal:", first_num <= second_num)
 
 
 # ==============================
