@@ -39,7 +39,8 @@ print(integer_num, "-> complex:", complex(integer_num), "-", type(complex(intege
 # ==============================
 is_valid = True
 is_complete = False
-print(is_valid, type(is_valid), is_complete, type(is_complete))
+print("Value: ",is_valid,"type: ", type(is_valid))
+print("Value: ",is_complete,"type: ", type(is_complete))
 
 comparison_result = 7 < 3
 print("Is 7 < 3?", comparison_result, type(comparison_result))
