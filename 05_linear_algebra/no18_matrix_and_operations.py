@@ -37,7 +37,7 @@ print("Shape:", matrix_1.shape)
 # ==============================
 # Random Matrices
 # ==============================
-random_matrix = np.random.rand(3, 3)
+random_matrix = np.random.rand(4, 4)
 
 print("Random Matrix:")
 print(random_matrix)
