@@ -66,10 +66,14 @@ print("Unit Matrix (Int):")
 print(matrix_4)
 
 # Zero Matrix
-null_matrix = np.zeros((6, 3), dtype=int)
+null_matrix_1 = np.zeros((6, 3))
+null_matrix_2 = np.zeros((6, 3), dtype=int)
 
-print("Null Matrix:")
-print(null_matrix)
+print("Null Matrix (Float):")
+print(null_matrix_1)
+
+print("Null Matrix (Int):")
+print(null_matrix_2)
 
 # Identity Matrix
 identity_matrix = np.eye(4, 4, dtype=int)
