@@ -76,10 +76,14 @@ print("Null Matrix (Int):")
 print(null_matrix_2)
 
 # Identity Matrix
-identity_matrix = np.eye(4, 4, dtype=int)
+identity_matrix_1 = np.eye(4, 4)
+identity_matrix_2 = np.eye(4, 4, dtype=int)
 
-print("Identity Matrix:")
-print(identity_matrix)
+print("Identity Matrix (Float):")
+print(identity_matrix_1)
+
+print("Identity Matrix (Int):")
+print(identity_matrix_2)
 
 
 # ==============================
