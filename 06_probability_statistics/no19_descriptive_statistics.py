@@ -26,7 +26,6 @@ data = [12, 15, 14, 10, 18, 21, 18, 15, 14, 13]
 def mean(data):
     return sum(data) / len(data)
 
-
 def median(data):
     sorted_data = sorted(data)
     n = len(sorted_data)
@@ -35,7 +34,6 @@ def median(data):
     if n % 2 == 0:
         return (sorted_data[mid - 1] + sorted_data[mid]) / 2
     return sorted_data[mid]
-
 
 def mode(data):
     frequency = Counter(data)
@@ -50,11 +48,9 @@ def mode(data):
 def data_range(data):
     return max(data) - min(data)
 
-
 def variance(data):
     m = mean(data)
     return sum((x - m) ** 2 for x in data) / len(data)
-
 
 def standard_deviation(data):
     return np.sqrt(variance(data))
@@ -66,7 +62,6 @@ def standard_deviation(data):
 
 def percentile(data, p):
     return np.percentile(data, p)
-
 
 def quartiles(data):
     return {
