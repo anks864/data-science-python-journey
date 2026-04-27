@@ -18,7 +18,7 @@ To build a strong foundation in Python for Machine Learning and consistently imp
 
 ## 📅 Progress
 
-Updating regularly to maintain consistency and improve coding skills.
+Updating regularly to maintain consistency and improve my coding skills.
 
 ## ⚙️ Tools Used
 
