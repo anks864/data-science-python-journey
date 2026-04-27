@@ -130,5 +130,7 @@ Understanding both **central tendency** and **variability** is essential for:
 ---
 
 ##============================================================
-EOF: Feel free to open an issue to report a bug or discrepancy 
+
+##EOF: Feel free to open an issue to report a bug or discrepancy 
+
 ##============================================================
