@@ -20,7 +20,6 @@ def normal_pdf(x, mean=0, std=1):
     """Probability Density Function"""
     return norm.pdf(x, mean, std)
 
-
 def normal_cdf(x, mean=0, std=1):
     """Cumulative Distribution Function"""
     return norm.cdf(x, mean, std)
@@ -34,10 +33,8 @@ def binomial_pmf(k, n, p):
     """Probability Mass Function"""
     return binom.pmf(k, n, p)
 
-
 def binomial_mean(n, p):
     return n * p
-
 
 def binomial_variance(n, p):
     return n * p * (1 - p)
