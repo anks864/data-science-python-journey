@@ -51,7 +51,6 @@ def one_sample_ttest(data, population_mean):
     t_stat, p_value = stats.ttest_1samp(data, population_mean)
     return t_stat, p_value
 
-
 def two_sample_ttest(data1, data2):
     """
     Performs independent two-sample t-test.
