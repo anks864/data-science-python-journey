@@ -4,6 +4,7 @@ Topic: Python Data Types
 Description: Covers numeric types, type conversion, boolean logic, and string operations.
 """
 
+
 # ==============================
 # 1. Integer
 # ==============================
