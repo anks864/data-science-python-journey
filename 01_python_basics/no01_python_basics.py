@@ -4,6 +4,7 @@ Topic: Python Basics
 Description: printing, data types, variables, and user input.
 """
 
+
 # ==============================
 # 1. Basic Printing
 # ==============================
