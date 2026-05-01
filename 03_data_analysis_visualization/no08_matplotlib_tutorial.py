@@ -4,8 +4,13 @@ Topic: Matplotlib Visualization
 Description: Covers line plots, multiple plots, bar charts, pie charts, scatter plots, and 3D plots.
 """
 
+
+# ==============================
+# Importing Libraries
+# ==============================
 import matplotlib.pyplot as plt
 import numpy as np
+
 
 # ==============================
 # 1. Line Plot (Sine & Cosine)
