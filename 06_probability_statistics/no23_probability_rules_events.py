@@ -51,9 +51,9 @@ def sample_space_dice():
 # Example Usage
 # ==============================
 if __name__ == "__main__":
-    print("P(A or B):", union(0.5, 0.4, 0.2))
-    print("Independent:", are_independent(0.5, 0.4, 0.2))
-    print("Sample Space Size:", len(sample_space_dice()))
+    print("P(A or B):", union(0.5, 0.4, 0.2)) # Probability of at least one event occurring
+    print("Independent:", are_independent(0.5, 0.4, 0.2)) # True → occurrence of one event does not affect the other
+    print("Sample Space Size:", len(sample_space_dice())) # Total possible outcomes for two dice = 36
 
 
 #==============================================================#
