@@ -21,7 +21,6 @@ def bayes_theorem(p_b_given_a, p_a, p_b):
 # ==============================
 # Example: Medical Testing
 # ==============================
-
 def medical_test_example():
     p_disease = 0.01
     p_positive_given_disease = 0.99
@@ -33,7 +32,6 @@ def medical_test_example():
 # ==============================
 # Naive Bayes (Simplified)
 # ==============================
-
 def naive_bayes(priors, likelihoods):
     posterior = priors * likelihoods
     return posterior / np.sum(posterior)
@@ -42,7 +40,6 @@ def naive_bayes(priors, likelihoods):
 # ==============================
 # Example Usage
 # ==============================
-
 if __name__ == "__main__":
     print("Posterior (Medical):", medical_test_example())
 
@@ -52,6 +49,6 @@ if __name__ == "__main__":
     print("Naive Bayes:", naive_bayes(priors, likelihoods))
 
 
-#============================================================#
-# EOF
-#============================================================#
+#==============================================================#
+# EOF: Feel free to open an issue to report a bug or discrepancy
+#==============================================================#
