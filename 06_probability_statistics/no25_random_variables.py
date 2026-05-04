@@ -31,6 +31,23 @@ def dice_expectation():
     return expectation(values, probabilities)
 
 
+# ==============================
+# Continuous Approximation
+# ==============================
+def continuous_mean(samples):
+    return np.mean(samples)
+
+
+# ==============================
+# Example Usage
+# ==============================
+if __name__ == "__main__":
+    print("Dice Expectation:", dice_expectation())
+
+    samples = np.random.normal(0, 1, 1000)
+    print("Approx Mean:", continuous_mean(samples))
+
+
 #==============================================================#
 # EOF: Feel free to open an issue to report a bug or discrepancy
 #==============================================================#
