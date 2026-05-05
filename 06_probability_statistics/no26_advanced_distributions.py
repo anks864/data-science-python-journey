@@ -25,6 +25,22 @@ def exponential_pdf(x, rate):
     return expon.pdf(x, scale=1/rate)
 
 
+# ==============================
+# Uniform Distribution
+# ==============================
+def uniform_pdf(x, a, b):
+    return uniform.pdf(x, loc=a, scale=b-a)
+
+
+# ==============================
+# Example Usage
+# ==============================
+if __name__ == "__main__":
+    print("Poisson:", poisson_pmf(3, 2))
+    print("Exponential:", exponential_pdf(1, 0.5))
+    print("Uniform:", uniform_pdf(2, 0, 5))
+
+
 #==============================================================#
 # EOF: Feel free to open an issue to report a bug or discrepancy
 #==============================================================#
