@@ -43,9 +43,10 @@ def continuous_mean(samples):
 # ==============================
 if __name__ == "__main__":
     print("Dice Expectation:", dice_expectation())
-
+    # Interpretation: Long-run average outcome of dice rolls (~3.5)
     samples = np.random.normal(0, 1, 1000)
     print("Approx Mean:", continuous_mean(samples))
+    # Interpretation: Estimated mean approaches true mean as sample size increases
 
 
 #==============================================================#
