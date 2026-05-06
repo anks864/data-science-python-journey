@@ -37,6 +37,20 @@ def mle_normal(data):
     return mu, sigma
 
 
+# ==============================
+# Example Usage
+# ==============================
+if __name__ == "__main__":
+    data = np.random.normal(10, 2, 100)
+
+    print("Sample:", simple_random_sample(data, 5))
+    # Subset representing the population
+    print("Mean Estimate:", estimate_mean(data))
+    # Best estimate of population mean
+    print("MLE:", mle_normal(data))
+    # Parameters (μ, σ) that best fit the data
+
+
 #==============================================================#
 # EOF: Feel free to open an issue to report a bug or discrepancy
 #==============================================================#
