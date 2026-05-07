@@ -27,6 +27,18 @@ def cosine_distance(a, b):
     return 1 - cosine_similarity(a, b)
 
 
+# ==============================
+# Example Usage
+# ==============================
+if __name__ == "__main__":
+    a = np.array([1, 2, 3])
+    b = np.array([4, 5, 6])
+
+    print("Euclidean:", euclidean_distance(a, b))
+    print("Manhattan:", manhattan_distance(a, b))
+    print("Cosine Distance:", cosine_distance(a, b))
+
+
 #==============================================================#
 # EOF: Feel free to open an issue to report a bug or discrepancy
 #==============================================================#
