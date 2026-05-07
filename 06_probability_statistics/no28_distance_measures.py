@@ -35,8 +35,11 @@ if __name__ == "__main__":
     b = np.array([4, 5, 6])
 
     print("Euclidean:", euclidean_distance(a, b))
+    # Straight-line distance between points
     print("Manhattan:", manhattan_distance(a, b))
+    # Distance along grid (useful in city-block layouts)
     print("Cosine Distance:", cosine_distance(a, b))
+    # Measures difference in direction (not magnitude)
 
 
 #==============================================================#
