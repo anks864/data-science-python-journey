@@ -35,13 +35,11 @@ if __name__ == "__main__":
     y = np.array([2, 4, 6, 8, 10])
 
     print("Covariance:", covariance(x, y))
-    # Interpretation: Positive → variables increase together
-
+    # Positive → variables increase together
     print("Correlation:", correlation(x, y))
-    # Interpretation: Close to 1 → strong linear relationship
-
+    # Close to 1 → strong linear relationship
     print("Correlation Matrix:\n", correlation_matrix([x, y]))
-    # Interpretation: Diagonal = 1, off-diagonal shows relationships
+    # Diagonal = 1, off-diagonal shows relationships
 
 
 #==============================================================#
