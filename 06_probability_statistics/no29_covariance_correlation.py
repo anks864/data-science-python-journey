@@ -20,6 +20,13 @@ def covariance(x, y):
     return np.mean((x - mean_x) * (y - mean_y))
 
 
+# ==============================
+# Correlation Matrix
+# ==============================
+def correlation_matrix(data):
+    return np.corrcoef(data, rowvar=False)
+
+
 #==============================================================#
 # EOF: Feel free to open an issue to report a bug or discrepancy
 #==============================================================#
