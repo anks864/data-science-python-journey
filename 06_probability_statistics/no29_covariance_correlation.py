@@ -5,6 +5,12 @@ Description: Covers relationships between variables using covariance and Pearson
 """
 
 
-#============================================================#
-# EOF
-#============================================================#
+# ==============================
+# Importing Libraries
+# ==============================
+import numpy as np
+
+
+#==============================================================#
+# EOF: Feel free to open an issue to report a bug or discrepancy
+#==============================================================#
