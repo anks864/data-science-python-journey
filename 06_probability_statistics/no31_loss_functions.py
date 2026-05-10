@@ -29,10 +29,10 @@ if __name__ == "__main__":
     y_pred = np.array([2, 5, 8])
 
     print("MSE:", mse(y_true, y_pred))
-    # Interpretation: Penalizes larger errors more strongly
+    # Penalizes larger errors (outliers) more strongly
 
     print("MAE:", mae(y_true, y_pred))
-    # Interpretation: Treats all errors equally
+    # Treats all errors equally (impartial towards outliers)
 
 
 #==============================================================#
