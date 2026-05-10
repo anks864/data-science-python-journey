@@ -21,6 +21,20 @@ def mae(y_true, y_pred):
     return np.mean(np.abs(y_true - y_pred))
 
 
+# ==============================
+# Example Usage
+# ==============================
+if __name__ == "__main__":
+    y_true = np.array([3, 5, 7])
+    y_pred = np.array([2, 5, 8])
+
+    print("MSE:", mse(y_true, y_pred))
+    # Interpretation: Penalizes larger errors more strongly
+
+    print("MAE:", mae(y_true, y_pred))
+    # Interpretation: Treats all errors equally
+
+
 #==============================================================#
 # EOF: Feel free to open an issue to report a bug or discrepancy
 #==============================================================# 
