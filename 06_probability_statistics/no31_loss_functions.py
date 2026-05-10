@@ -5,6 +5,12 @@ Description: Covers MSE and MAE used in regression.
 """
 
 
+# ==============================
+# Importing Libraries
+# ==============================
+import numpy as np
+
+
 #==============================================================#
 # EOF: Feel free to open an issue to report a bug or discrepancy
 #==============================================================# 
