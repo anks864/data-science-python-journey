@@ -36,7 +36,7 @@ if __name__ == "__main__":
     y_pred = np.array([2.1, 3.9, 6.2, 7.8])
 
     res = residuals(y_true, y_pred)
-    print("Mean ~ 0:", check_mean_zero(res)) #True → residuals centered (good sign)
+    print("Mean ~ 0:", check_mean_zero(res)) #The value TRUE implies residuals centered (good sign)
     print("Variance:", check_variance(res)) # Stable variance → homoscedasticity
 
 
