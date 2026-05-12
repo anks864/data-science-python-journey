@@ -11,6 +11,13 @@ Description: Checks basic assumptions like linearity and residual distribution.
 import numpy as np
 
 
+# ==============================
+# Residuals
+# ==============================
+def residuals(y_true, y_pred):
+    return y_true - y_pred
+
+
 #==============================================================#
 # EOF: Feel free to open an issue to report a bug or discrepancy
 #==============================================================#
