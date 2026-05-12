@@ -28,6 +28,18 @@ def check_variance(res):
     return np.var(res)
 
 
+# ==============================
+# Example Usage
+# ==============================
+if __name__ == "__main__":
+    y_true = np.array([2, 4, 6, 8])
+    y_pred = np.array([2.1, 3.9, 6.2, 7.8])
+
+    res = residuals(y_true, y_pred)
+    print("Mean ~ 0:", check_mean_zero(res)) #True → residuals centered (good sign)
+    print("Variance:", check_variance(res)) # Stable variance → homoscedasticity
+
+
 #==============================================================#
 # EOF: Feel free to open an issue to report a bug or discrepancy
 #==============================================================#
