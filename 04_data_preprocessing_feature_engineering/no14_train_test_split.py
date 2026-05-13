@@ -69,9 +69,9 @@ X_train, X_test, Y_train, Y_test = train_test_split(
 )
 
 print(
-    "X.shape =", X.shape,
-    "X_train.shape =", X_train.shape,
-    "X_test.shape =", X_test.shape
+    "X.shape =", X.shape, # total size
+    "X_train.shape =", X_train.shape, # size of train data
+    "X_test.shape =", X_test.shape # size of test data
 )
 
 
