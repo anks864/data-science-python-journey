@@ -34,6 +34,16 @@ def iqr_outliers(data):
     return np.where((data < lower) | (data > upper))
 
 
+# ==============================
+# Example Usage
+# ==============================
+if __name__ == "__main__":
+    data = np.array([10, 12, 14, 15, 100])
+
+    print("Z-score Outliers:", z_score_outliers(data) # Extreme values far from mean
+    print("IQR Outliers:", iqr_outliers(data) # Values outside normal spread
+
+          
 #==============================================================#
 # EOF: Feel free to open an issue to report a bug or discrepancy
 #==============================================================#
