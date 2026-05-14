@@ -21,6 +21,19 @@ def z_score_outliers(data, threshold=3):
     return np.where(np.abs(z_scores) > threshold)
 
 
+# ==============================
+# IQR Method
+# ==============================
+def iqr_outliers(data):
+    q1 = np.percentile(data, 25)
+    q3 = np.percentile(data, 75)
+    iqr = q3 - q1
+    lower = q1 - 1.5 * iqr
+    upper = q3 + 1.5 * iqr
+
+    return np.where((data < lower) | (data > upper))
+
+
 #==============================================================#
 # EOF: Feel free to open an issue to report a bug or discrepancy
 #==============================================================#
