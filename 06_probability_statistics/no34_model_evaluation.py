@@ -36,6 +36,17 @@ if __name__ == "__main__":
     y_true = np.array([3, 5, 7, 9])
     y_pred = np.array([2.5, 5, 7.5, 8])
 
+    print("MSE:", mse(y_true, y_pred))
+    # Interpretation: Lower → better model fit
+
+    print("RMSE:", rmse(y_true, y_pred))
+    # Interpretation: Error in original units
+
+    print("MAE:", mae(y_true, y_pred))
+    # Interpretation: Average absolute error
+
+    print("R2 Score:", r2_score(y_true, y_pred))
+    # Interpretation: Closer to 1 → explains more variance
     
 
 #==============================================================#
