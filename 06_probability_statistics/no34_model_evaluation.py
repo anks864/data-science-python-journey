@@ -32,7 +32,11 @@ def r2_score(y_true, y_pred):
 # ==============================
 # Example Usage
 # ==============================
+if __name__ == "__main__":
+    y_true = np.array([3, 5, 7, 9])
+    y_pred = np.array([2.5, 5, 7.5, 8])
 
+    
 
 #==============================================================#
 # EOF: Feel free to open an issue to report a bug or discrepancy
