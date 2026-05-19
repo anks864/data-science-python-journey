@@ -22,8 +22,7 @@ tips = sns.load_dataset('tips')
 print("Shape of Tips dataset:", tips.shape)
 print(tips.head())
 
-# Visualization: Relational Plot
-sns.set_theme()
+sns.set_theme() # Visualization: Relational Plot
 
 sns.relplot(
     data=tips,
