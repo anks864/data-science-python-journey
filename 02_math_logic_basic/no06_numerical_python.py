@@ -9,7 +9,7 @@ Description: Demonstrates NumPy operations, array creation, performance comparis
 # Importing Libraries
 # ==============================
 import numpy as np
-from time import process_time
+from time import process_time # measures CPU execution time
 
 
 # ==============================
