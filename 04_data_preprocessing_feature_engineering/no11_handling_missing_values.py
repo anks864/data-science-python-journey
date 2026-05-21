@@ -18,6 +18,7 @@ import seaborn as sns
 # ==============================
 dataset = pd.read_csv("Placement_Dataset.csv")
 
+print("First five rows of the dataset:")
 print(dataset.head())
 print("Shape of the data:", dataset.shape)
 
