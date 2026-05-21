@@ -26,9 +26,9 @@ def variance(values, probabilities):
 # Discrete Random Variable Example
 # ==============================
 def dice_expectation():
-    values = np.array([1, 2, 3, 4, 5, 6])
+    valueSet = np.array([1, 2, 3, 4, 5, 6])
     probabilities = np.ones(6) / 6
-    return expectation(values, probabilities)
+    return expectation(valueSet, probabilities)
 
 
 # ==============================
@@ -47,6 +47,6 @@ if __name__ == "__main__":
     print("Approx Mean:", continuous_mean(samples)) # Estimated mean approaches true mean as sample size increases
 
 
-#==============================================================#
+#===============================================================
 # EOF: Feel free to open an issue to report a bug or discrepancy
-#==============================================================#
+#===============================================================
