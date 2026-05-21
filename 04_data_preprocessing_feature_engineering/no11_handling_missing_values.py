@@ -57,8 +57,8 @@ print("Sample Salary Values:")
 print(dataset['salary'].head())
 
 # To use mean/mode instead:
-# dataset['salary'].mean()
-# dataset['salary'].mode()[0]
+# Mean: dataset['salary'].mean()
+# Mode: dataset['salary'].mode()[0]
 
 
 # ==============================
@@ -76,6 +76,6 @@ print(salary_dataset.isnull().sum())
 print("Final shape:", salary_dataset.shape)
 
 
-# ==============================
+# ==============================================================
 # EOF: Feel free to open an issue to report a bug or discrepancy
-# ==============================
+# ==============================================================
