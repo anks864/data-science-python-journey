@@ -25,8 +25,8 @@ plt.show()
 # ==============================
 plt.quiver(0, 0, 2, 3, scale_units='xy', angles='xy', scale=1, color='g')
 plt.quiver(0, 0, 3, -2, scale_units='xy', angles='xy', scale=1, color='r')
-plt.quiver(0, 0, 5, 1, scale_units='xy', angles='xy', scale=1, color='y')
-plt.quiver(0, 0, -1, 5, scale_units='xy', angles='xy', scale=1, color='y')
+plt.quiver(0, 0, 6, 1, scale_units='xy', angles='xy', scale=1, color='y')
+plt.quiver(0, 0, -1, 6, scale_units='xy', angles='xy', scale=1, color='b')
 
 plt.xlim(-8, 8)
 plt.ylim(-8, 8)
@@ -37,8 +37,8 @@ plt.show()
 # ==============================
 # Vector Addition & Subtraction
 # ==============================
-vector_1 = np.array([0, 0, 2, 3])
-vector_2 = np.array([0, 0, 3, -2])
+vector_1 = np.array([0, 0, 5, 4])
+vector_2 = np.array([0, 0, 3, -6])
 
 vector_sum = vector_1 + vector_2
 vector_diff = vector_1 - vector_2
