@@ -76,6 +76,7 @@ plt.show()
 # ==============================
 # Dot Product & Cross Product
 # ==============================
+#2-D VECTORS
 a = np.array([2, 3])
 b = np.array([4, 4])
 
@@ -88,9 +89,9 @@ print("Dot Product (A · B):", a_dot_b)
 print("Cross Product (A x B):", a_cross_b)
 
 
-# 3D Vectors
+# 3D VECTORS
 c = np.array([40, 20, 35])
-d = np.array([53, 24, 68])
+d = np.array([53, 24, 67])
 
 c_dot_d = np.dot(c, d)
 c_cross_d = np.cross(c, d)
